@@ -1,4 +1,7 @@
+package exercicio1;
+
 import java.io.BufferedWriter;
+import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
