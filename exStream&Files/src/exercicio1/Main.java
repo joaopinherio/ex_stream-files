@@ -2,6 +2,8 @@ package exercicio1;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        LeituraArquivoTexto ex1 = new LeituraArquivoTexto();
+
+        ex1.leArquivoTexto();
     }
 }
