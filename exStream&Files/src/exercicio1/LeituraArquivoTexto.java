@@ -29,7 +29,6 @@ public class LeituraArquivoTexto {
         }catch(Exception e){
             System.out.println(e);
         }
-        
     }
 
 }
