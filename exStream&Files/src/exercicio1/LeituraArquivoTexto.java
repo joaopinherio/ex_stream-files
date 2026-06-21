@@ -3,6 +3,7 @@ package exercicio1;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -16,18 +17,19 @@ public class LeituraArquivoTexto {
 
     public void leArquivoTexto(){
         Path path = Paths.get("NOMES.TXT");
+        String line = "";
+        BufferedReader reader =  null;
 
         try{
-            //classe para "ler" o arquivo
-            BufferedReader br = new BufferedReader(new FileReader("NOMES.TXT"));
-            while(br.readLine()!= null){
-                System.out.println(br.readLine());
+            reader = Files.newBufferedReader(path, Charset.defaultCharset());
+            while((line = reader.readLine()) != null){
+                System.out.println(line);
             }
-            br.close();
-        }
-        catch(Exception e){
+            reader.close();
+        }catch(Exception e){
             System.out.println(e);
         }
+        
     }
 
 }
